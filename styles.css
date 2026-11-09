@@ -272,10 +272,15 @@ figcaption a:hover { color: var(--ink); text-decoration: underline; }
 /* Full-width teaching with individual course cards. */
 .teaching-section .section-label { margin-bottom: 30px; }
 .teaching-course-list { list-style: none; padding: 0; margin: 16px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
-.teaching-course-list li { display: flex; flex-direction: column; gap: 3px; padding: 10px 13px; border: 1px solid var(--line); border-radius: 10px; font-size: 12px; line-height: 1.45; color: var(--text); }
+.teaching-course-list li { min-width: 0; }
+.teaching-course-link { display: flex; height: 100%; flex-direction: column; gap: 3px; padding: 10px 13px; border: 1px solid var(--line); border-radius: 10px; font-size: 12px; line-height: 1.45; color: var(--text); text-decoration: none; transition: border-color .18s ease, background-color .18s ease, transform .18s ease; }
+.teaching-course-link:hover, .teaching-course-link:focus-visible { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 9%, var(--paper)); color: var(--ink); transform: translateY(-2px); }
+.teaching-course-link:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 10px; }
 .teaching-course-code { color: var(--accent); font-size: 11px; font-weight: 600; letter-spacing: .07em; }
+.course-repeat { color: var(--muted); font-family: var(--sans); font-size: .68em; font-weight: 400; line-height: 0; vertical-align: sub; white-space: nowrap; }
 @media (max-width: 760px) { .teaching-course-list { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 480px) { .teaching-course-list { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .teaching-course-link { transition: none; } .teaching-course-link:hover, .teaching-course-link:focus-visible { transform: none; } }
 
 .teaching-section .teaching-entry:first-child { border-top: 0; padding-top: 0; }
 
@@ -310,6 +315,7 @@ figcaption a:hover { color: var(--ink); text-decoration: underline; }
 
 .instructor-layout { display: grid; grid-template-columns: 330px minmax(0, 1fr); gap: 26px; align-items: center; }
 .instructor-description { margin: 0; padding-left: 26px; border-left: 1px solid var(--accent); font-size: 14px; line-height: 1.7; }
+.course-evaluation { margin-top: 10px; color: var(--muted); font-size: 13px; font-style: italic; }
 @media (max-width: 760px) { .instructor-layout { grid-template-columns: 1fr; gap: 14px; } .instructor-description { padding-left: 16px; } }
 
 .footer-details { display: flex; flex-wrap: wrap; gap: 8px 24px; }
