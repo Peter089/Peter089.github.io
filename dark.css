@@ -1,0 +1,24 @@
+/* Alternate palette; the shared academic layout and light print style remain. */
+@media screen {
+  :root {
+    color-scheme: dark;
+    --paper: #151d23;
+    --ink: #f1eadb;
+    --text: #c2c9cb;
+    --muted: #9da9af;
+    --accent: #c4aa7a;
+    --line: #354149;
+  }
+
+  ::selection { background: #c4aa7a; color: #151d23; }
+  a:hover { color: #e3c997; }
+  .site-header { border-top-color: #c4aa7a; }
+  .button, .skip-link { background: #d6c29a; border-color: #d6c29a; color: #151d23; }
+  .button:hover, .skip-link:focus { background: #e3d2b2; border-color: #e3d2b2; color: #151d23; }
+  .portrait-frame::after { border-color: #746b56; }
+  .affiliation-note a { text-decoration-color: #69767b; }
+  .research-area { border-top-color: #776e5b; }
+  .topic-health, .timeline dd .topic-health { background: #253b35; color: #a8c9bb; }
+  .topic-drone, .timeline dd .topic-drone { background: #263747; color: #afc5db; }
+  .topic-others, .timeline dd .topic-others { background: #3a3042; color: #c9b6d6; }
+}
