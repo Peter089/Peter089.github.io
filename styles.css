@@ -293,7 +293,7 @@ figcaption a:hover { color: var(--ink); text-decoration: underline; }
 .publication-section .publication-actions .text-link { min-height: 28px; }
 .publication-section .publication-actions .topic-label { padding: 3px 9px; }
 @media screen {
-  .publication-section { padding-bottom: 24px; }
+  .publication-section { padding-bottom: 40px; }
   .publication-section + #honours { padding-top: 24px; }
 }
 
